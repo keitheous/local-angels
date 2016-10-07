@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>Local Angels</title>
+  <!-- <link rel="stylesheet" href="stylesheets/styles.css"> -->
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <nav class="#3d5afe indigo accent-3" role="navigation">
+      <a href="/" class="container brand-logo">
+        <img src="http://placehold.it/150x64">
+      </a>
+      <div class="nav-wrapper">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/">About</a></li>
+          <li><a href="/">How it Works</a></li>
+          <li><a href="/contacts/new">Become a Local Angel</a></li>
+          <li><a href="#">Local Angel Stories</a></li>
+          <li><a href="/contacts/new">Community</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#">About</a></li>
+          <li><a href="#">How it Works</a></li>
+          <li><a href="/contacts/new">Become a Local Angel</a></li>
+          <li><a href="#">Local Angel Stories</a></li>
+          <li><a href="/contacts/new">Community</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </header>
+
+  <%= yield %>
+
+  <!--  Script-->
+  <script>
+  (function($){
+    $(function(){
+      $('.button-collapse').sideNav();
+      $('.parallax').parallax();
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+  </script>
+
+
+</body>
+</html>
